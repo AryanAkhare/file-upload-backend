@@ -1,0 +1,52 @@
+PROJECT TITLE:
+Image & Video Upload Backend Application
+
+GOAL:
+The main goal of this project is to build a backend system that allows users to upload
+images and videos, store them securely using Cloudinary or local storage, save file
+details in a database, and notify users via email after a successful upload.
+
+PROJECT OVERVIEW:
+This backend application is built using Node.js, Express, and MongoDB.
+It handles multipart file uploads, supports both images and videos, and integrates
+third-party services like Cloudinary for cloud storage and Nodemailer for email
+notifications.
+
+KEY FEATURES:
+- Upload images and videos from client to server
+- Store media files on Cloudinary
+- Optional local file storage on server
+- Save file metadata (name, type, URL, email) in MongoDB
+- Send confirmation email after successful upload
+- Clean MVC-based folder structure
+
+TECHNOLOGIES USED:
+- Node.js
+- Express.js
+- MongoDB & Mongoose
+- Cloudinary (media storage)
+- Nodemailer (email service)
+- express-fileupload (file handling)
+- dotenv (environment variables)
+
+BACKEND FLOW:
+Client sends file (multipart/form-data)
+→ Express server receives request
+→ Middleware processes file
+→ Controller uploads file to Cloudinary or local storage
+→ File details saved in MongoDB
+→ Confirmation email sent to user
+
+USE CASE:
+This project can be used as:
+- Media upload service
+- Backend for social media apps
+- Learning project for file handling and cloud integration
+- Base for scalable media applications
+
+END GOAL:
+To understand real-world backend concepts such as file uploads, cloud storage,
+database integration, and email notifications in a structured and production-ready way.
+
+
+
