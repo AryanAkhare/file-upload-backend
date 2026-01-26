@@ -50,3 +50,4 @@ database integration, and email notifications in a structured and production-rea
 
 
 
+/imageUpload --> A data fetch B validation for supported or not supported file , upload to Cloudinary , db save , successful response
