@@ -16,12 +16,12 @@ async function uploadAndReduceImage(file, folder, options = {}) {
         unique_filename: false
     };
 
-    // 🔹 Reduce by quality
+    //  Reduce by quality
     if (options.quality) {
         uploadOptions.quality = options.quality; // e.g. "auto:low", 60
     }
 
-    // 🔹 Reduce by dimensions
+    //  Reduce by dimensions
     if (options.width || options.height) {
         uploadOptions.transformation = [{
             width: options.width,
@@ -43,7 +43,7 @@ exports.imageSizeReducer = async (req, res) => {
     try {
         const { name, tags, email } = req.body;
 
-        // 🔒 Validate file exists
+        //  Validate file exists
         if (!req.files || !req.files.image) {
             return res.status(400).json({
                 success: false,
@@ -53,7 +53,7 @@ exports.imageSizeReducer = async (req, res) => {
 
         const file = req.files.image;
 
-        // 🔒 Validate file type
+        //  Validate file type
         const supportedTypes = ["jpg", "jpeg", "png"];
         const fileType = file.name.split(".").pop().toLowerCase();
 
@@ -64,7 +64,7 @@ exports.imageSizeReducer = async (req, res) => {
             });
         }
 
-        // 🚀 Upload + reduce (CHANGE OPTIONS HERE)
+        //  Upload + reduce (CHANGE OPTIONS HERE)
         const response = await uploadAndReduceImage(file, "Codehelp", {
             quality: "auto:low", // optional
             width: 800,           // optional
@@ -78,7 +78,7 @@ exports.imageSizeReducer = async (req, res) => {
             });
         }
 
-        // 💾 Save to DB
+        //  Save to DB
         const fileData = await File.create({
             name,
             tags,
