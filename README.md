@@ -59,7 +59,7 @@ file-upload-app/
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone "https://github.com/AryanAkhare/file-upload-backend"
 cd file-upload-app
 ```
 
@@ -237,15 +237,5 @@ To contribute to this project:
 2. Make your changes
 3. Test thoroughly
 4. Submit a pull request
-
-## License
-
-ISC
-
-## Author
-
-Your Name / Organization
-
-## Support
 
 For issues and questions, please create an issue in the repository.
